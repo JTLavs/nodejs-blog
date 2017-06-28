@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-blog",
+  "version": "1.0.0",
+  "description": "Blog built in NodeJS with MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "blog test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTLavs/nodejs-blog.git"
+  },
+  "author": "James Lavery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTLavs/nodejs-blog/issues"
+  },
+  "homepage": "https://github.com/JTLavs/nodejs-blog#readme"
+}
