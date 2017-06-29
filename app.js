@@ -22,8 +22,11 @@ if(process.env.NODE_ENV == 'production')
 var articleProvider = new ArticleProvider();
 
 app.get('/', function(req,res){
-	articleProvider.findAll(function(error, docs){
-		res.send(docs);
+	articleProvider.findAll( function(error, docs){
+		res.render('index.pug', {
+			title : 'Blog',
+			articles:docs
+	 });
 	});
 })
 

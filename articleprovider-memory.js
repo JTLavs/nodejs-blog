@@ -18,32 +18,32 @@ ArticleProvider.prototype.findById = function(id,callback){
 	callback(null, result)
 };
 
-ArticleProvider.prototype.save = function(articles, callback){
+ArticleProvider.prototype.save = function(articles, callback) {
 	var article = null;
 	
-	if(typeof(articles.length == "undefined"))
+	if( typeof(articles.length)=="undefined")
 		articles = [articles];
 	
-	for(var i=0;i<articles.length;i++){
-		article = articles[i];
-		article._id = articleCounter++;
-		article.created_at = new Date();
+  for( var i =0;i< articles.length;i++ ) {
+    article = articles[i];
+    article._id = articleCounter++;
+    article.created_at = new Date();
 		
-		if(article.comments == undefined)
-			article.comments = []
-		
-		for(var j=0;j<article.comments.length;j++){
-			article.comments[j].created_at = new Date();
-		}
-		this.dummyData[this.dummyData.length]= article;
-	}
-	callback(null, articles)
+    if( article.comments === undefined )
+      article.comments = [];
+
+    for(var j =0;j< article.comments.length; j++) {
+      article.comments[j].created_at = new Date();
+    }
+    this.dummyData[this.dummyData.length]= article;
+  }
+  callback(null, articles);
 };
 
 new ArticleProvider().save([
-	{title : 'Post one', body : 'Body one', comments: [{author : 'Bob', comment : 'I Love it'}, {author : 'Dave', comment : 'This is shit!'}]},
-	{title : 'Post two', body : 'Body two'},
-	{titlec : 'Post three', body : 'Body three'}
-], function(error, articles){})
+  {title: 'Post one', body: 'Body one', comments:[{author:'Bob', comment:'I love it'}, {author:'Dave', comment:'This is rubbish!'}]},
+  {title: 'Post two', body: 'Body two'},
+  {title: 'Post three', body: 'Body three'}
+], function(error, articles){});
 
 exports.ArticleProvider = ArticleProvider;
