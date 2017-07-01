@@ -1,0 +1,73 @@
+body {
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 13px;
+  text-stroke: 1px rgba(255,255,255,0.1);
+  color: #555;
+}
+h1,
+h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #343434;
+  text-align: center;
+}
+h1 {
+  text-shadow: 1px 2px 2px #ddd;
+  font-size: 60px;
+}
+#articles {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+#articles .article {
+  margin: 20px;
+}
+#articles .article .created_at {
+  display: none;
+}
+#articles .article .title {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #eee;
+}
+#articles .article .body {
+  background-color: #ffa;
+}
+.article .title {
+  font-size: 28px;
+  margin-left: 10px;
+}
+.article .body {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.article .created_at {
+  display: none;
+}
+.article input {
+  margin-bottom: 10px;
+}
+.article input[type =text] {
+  width: 490px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.article input[type =button],
+.article input[type =submit] {
+  text-align: left;
+  margin-left: auto;
+  border-radius: 2px;
+  background: #faa;
+  color: #000;
+}
+.article textarea {
+  width: 490px;
+  height: 90px;
+  resize: none;
+  padding: 10px;
+  font-size: 15px;
+  color: #008000;
+  margin-bottom: 20px;
+}

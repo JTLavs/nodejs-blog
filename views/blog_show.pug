@@ -1,0 +1,21 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/styles.css')
+	div.article(style='width:500px;border:1px solid gray;margin:auto')
+		div.title= article.title
+		div.body= article.body
+		each comment in article.comments
+			div.comment
+				div.person= comment.person
+				div.comment = comment.comment
+		div(style='text-align:center;background:#f4f4f4;margin-top:10px;border-top:1px solid #dedede')
+			p(style='font-size:15px;text-align:left;padding-left:10px') Add Comment...
+			form(method='post', action='/blog/addComment')
+			input(type='hidden', name='_id', value=article._id.toHexString())
+			div
+				input(type='text', name='person', placeholder='Your name...', id='addCommentPerson')
+			div
+				textarea(name='comment', placeholder='Comment...', rows='5', id='addCommentComment')
+			div#editArticleSubmit
+				input(type='submit', value='Add comment')

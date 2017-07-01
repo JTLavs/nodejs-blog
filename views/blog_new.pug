@@ -1,0 +1,14 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/styles.css')
+	form(method='post')
+		div
+			div
+				span Title:
+				input(type='text', name='title', id='editArticleTitle')
+			div
+				span Body:
+				input(name='body', rows=20, id='editArticleBody')
+			div#editArticleSubmit
+				input(type='submit', value='Send')

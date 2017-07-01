@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Blog built in NodeJS with MongoDB",
   "main": "app.js",
+  "dependencies" : {
+	"express" : "latest",
+	"stylus" : "latest",
+	"pug" : "latest",
+	"mongodb" : "latest"
+  },
   "scripts": {
     "test": "blog test"
   },
